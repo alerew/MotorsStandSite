@@ -1,0 +1,113 @@
+#mainImg {
+    background-image: url(Images/1000007739.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#info {
+    display: flex;
+    position: relative;
+    height: 80vh;
+    background-color: #00000077;
+}
+
+/*Актуальность*/
+
+#relevance {
+    height: fit-content;
+    width: fit-content;
+    /*padding-top: 50px;
+    padding-left: 50px*/
+    position: absolute;
+    top: 50px;
+    left: 5%;
+}
+
+#relevance .card:hover {
+    height: 580px;
+}
+
+#relevance .card:hover .cardText {
+    height: 500px;
+}
+
+/*Цели*/
+
+#purpose {
+    height: fit-content;
+    width: fit-content;
+    /*padding-top: 50px;
+    padding-left: 50px*/
+    position: absolute;
+    top: 50px;
+    left: 30%;
+}
+
+#purpose p {
+    font-size: 16px;
+    line-height: 1.25;
+    margin: 0;
+    padding: 0 20px 5px 20px;
+}
+
+#purpose ul {
+    padding: 0 20px 20px 36px;
+}
+
+#purpose .card:hover {
+    height: 350px;
+}
+
+#purpose .card:hover .cardText {
+    height: 230px;
+}
+
+/*Задачи*/
+
+#tasks {
+    height: fit-content;
+    width: fit-content;
+    /*padding-top: 50px;
+    padding-left: 50px*/
+    position: absolute;
+    top: 50px;
+    left: 55%;
+}
+
+#tasks ol {
+    padding: 0 20px 20px 36px;
+}
+
+#tasks .card:hover {
+    height: 350px;
+}
+
+#tasks .card:hover .cardText {
+    height: 270px;
+}
+
+
+/*Описание*/
+
+#description {
+    height: fit-content;
+    width: fit-content;
+    /*padding-top: 50px;
+    padding-left: 50px*/
+    position: absolute;
+    top: 50px;
+    left: 80%;
+}
+
+.video-container {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,18 @@
+#Arduino li{
+    margin-bottom: 8px;
+}
+
+#wpf{
+    height: auto;
+    grid-template-columns: 1fr 1fr;
+}
+
+#wpf img {
+    left: auto;
+    right: 0;
+}
+
+#description{
+    height: 350px;
+    grid-template-columns: 396px auto;
+}

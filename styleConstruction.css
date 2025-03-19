@@ -1,0 +1,54 @@
+#strImg:hover {
+    transform: scale(1.5);
+    right: 125px;
+}
+
+#flexFeautures {
+    display: flex;
+    width: 1040px;
+}
+
+#LY-30KGF {
+    height: 480px;
+    grid-template-columns: 390px auto;
+}
+
+#avanti {
+    height: 420px;
+    grid-template-columns: 420px auto;
+}
+
+#LY-MAX {
+    height: 500px;
+    grid-template-columns: 520px auto;
+}
+
+#fasteners {
+    grid-template-rows: 260px auto;
+}
+
+#wheel {
+    grid-template-rows: 360px auto;
+}
+
+#tenzo {
+    grid-template-rows: 583px auto;
+}
+
+#scheme {
+    height: auto;
+    grid-template-columns: 1fr 1fr;
+}
+
+#scheme img {
+    left: auto;
+    right: 0;
+}
+#systems {
+    height: 350px;
+    grid-template-columns: 265px auto;
+}
+
+#rpm{
+    grid-template-rows: 375px auto;
+}

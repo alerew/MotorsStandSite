@@ -1,0 +1,352 @@
+@font-face {
+    font-family: YSText;
+    src: url(https://yastatic.net/s3/promohr/static/promo-yandex-dev/5/_next/static/media/YSText-Light-Web.38cc8d65.woff2) format("woff2"),
+        url(https://yastatic.net/s3/promohr/static/promo-yandex-dev/5/_next/static/media/YSText-Light-Web.12eef626.woff) format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: fallback
+}
+
+@font-face {
+    font-family: YSDisplay;
+    src: url(https://yastatic.net/s3/promohr/static/promo-yandex-dev/5/_next/static/media/YSDisplay-Light.24cf7da9.woff2) format("woff2"),
+        url(https://yastatic.net/s3/promohr/static/promo-yandex-dev/5/_next/static/media/YSDisplay-Light.718e2053.woff) format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: fallback
+}
+
+:root {
+    --font-famyly-text: YSText, "Open Sans", "Helvetica Neue", arial, sans-serif;
+    --font-family-heading: YSDisplay, "Open Sans", "Helvetica Neue", arial, sans-serif;
+    --color-bg-body: #0d0d0d;
+    --colot-title: #ffffff;
+    --colot-text: #ffffff;
+    --color-link: #ffffff;
+    --color-bg-link: hsla(0, 0%, 100%, .1);
+    --color-bg-link-hover: #000;
+    --color-bg-card: #191919;
+    --color-bg-card2: #1E222B;
+    --color-bg-vert-card: #282E3B;
+    --color-link2-hover: #ffffff77;
+
+    /*--color-bg-body: #fafafa;
+    --colot-title: #111111;
+    --colot-text: #333333;
+    --color-link: #007bff;
+    --color-bg-link: hsl(210, 50%, 95%);
+    --color-bg-link-hover: #dddddd;
+    --color-bg-card: #ffffff;
+    --color-bg-card2: #f5f5f5;
+    --color-bg-vert-card: #eaeaea;*/
+}
+
+body {
+    background-color: var(--color-bg-body);
+    color: var(--colot-text);
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 20px;
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-bottom: 8px;
+}
+
+#headerTitle {
+    display: flex;
+    position: relative;
+    color: var(--colot-title);
+    justify-content: flex-start;
+}
+
+#headerTitle a {
+    text-decoration: none;
+    font-size: 32px;
+    font-family: YSText;
+    color: var(--color-link);
+}
+
+#headerNav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.headerLink {
+    font-family: YSText;
+    color: var(--color-link);
+    text-decoration: none;
+    font-size: 21px;
+    padding: 10px;
+    border-radius: 8px;
+    border-width: 1px;
+    background-color: var(--color-bg-link);
+    transition: all .5s;
+}
+
+.headerLink:hover {
+    background-color: var(--color-bg-link-hover);
+    transition: all .5s;
+}
+
+hr {
+    color: var(--color-bg-link)
+}
+
+
+.card li {
+    padding-bottom: 10px;
+}
+
+/*Карта с информацией*/
+
+.card {
+    width: 285px;
+    height: 300px;
+    background-color: var(--color-bg-card);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+    position: relative;
+    cursor: default;
+}
+
+.cardTitle {
+    padding: 20px;
+    font: normal 26px/1.17 var(--font-family-heading);
+    /*letter-spacing: -.01em;*/
+    color: var(--color-text);
+}
+
+.cardText {
+    height: 200px;
+    font-size: 16px;
+    line-height: 1.25;
+    margin: 0;
+    padding: 0 20px 20px 20px;
+    white-space: collapse;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+}
+
+.cardText::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to top, var(--color-bg-card) 0, rgba(25, 25, 25, 0) 100px);
+    pointer-events: none;
+}
+
+.card:hover {
+    /*height: 600px;*/
+    background-color: var(--color-bg-card);
+    z-index: 1;
+}
+
+.card:hover .cardText {
+    /*height: 600px;*/
+    white-space: normal;
+    overflow: visible;
+}
+
+.card:hover .cardText::after {
+    background-image: none;
+}
+
+.card a {
+    color: var(--color-link);
+}
+
+.card a:hover {
+    color: var(--color-link2-hover);
+}
+
+
+.mainText {
+    padding: 20px;
+    font-size: 110%;
+}
+
+.leftPanel {
+    margin: 30px 20px 0px 40px;
+    position: relative;
+}
+
+.article {
+    /*margin: 30px 40px 0px 40px;*/
+    position: sticky;
+    top: 25px;
+    background-color: var(--color-bg-card);
+    border-radius: 20px;
+    height: 300px;
+}
+
+.article ul {
+    margin-top: 0;
+    width: 250px;
+    list-style-type: none;
+}
+
+.article ul li {
+    margin-bottom: 5px;
+}
+
+.article a {
+    color: var(--color-link);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.article a:hover {
+    color: var(--color-link2-hover);
+}
+
+.card2 {
+    border-radius: 30px;
+    background-color: var(--color-bg-card2);
+    /*padding: 20px;*/
+    margin: 10px 5px 30px 5px;
+}
+
+.card2 h2 {
+    margin: 0;
+}
+
+.cardGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.textGrid {
+    padding: 30px;
+    font-size: 18px;
+}
+
+.imgGrid {
+    position: relative;
+}
+
+.imgGrid img {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    top: 0;
+    border-radius: 30px;
+    transition: .5s ease-in-out;
+
+}
+
+.textGrid h2 {
+    text-align: center;
+    margin: 0;
+    /*font-size: 26px;*/
+}
+
+.textGrid h3 {
+    text-align: center;
+    margin: 0;
+}
+
+.textGrid li {
+    margin-bottom: 5px;
+}
+
+.textGrid a{
+    color: var(--color-link);
+}
+.textGrid a:hover{
+    color: var(--color-link2-hover);
+}
+
+.cardGridVert {
+    margin: 0 20px 40px 20px;
+    display: grid;
+    grid-template-rows: 270px auto;
+    width: 500px;
+    background-color: var(--color-bg-vert-card);
+    border-radius: 30px;
+}
+
+.cardGridVert img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+.cardGridVert .textGrid{
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.cardGridHor {
+    margin: 0 20px 40px 20px;
+    display: grid;
+    grid-template-columns: 270px auto;
+    height: 300px;
+    background-color: var(--color-bg-vert-card);
+    border-radius: 30px;
+}
+
+.cardGridHor img {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    left: 0;
+    right: auto;
+}
+
+/* Стили для плавной анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.visible {
+    animation: fadeIn 1s;
+}
+
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    font-size: 16px;
+    background-color: var(--color-bg-card);
+    color: var(--color-link);
+    border-width: 0;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#back-to-top:hover {
+    background-color: #ffffffaa;
+    color: #000;
+}
+
+#back-to-top.show {
+    display: block;
+    /* Показывается при прокрутке */
+}

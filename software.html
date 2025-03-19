@@ -1,0 +1,162 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Стенд для измерения характеристик двигателя и воздушных винтов</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleSoftware.css">
+    <script src="scripts/script1.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="header">
+            <div id="headerTitle">
+                <a href="#">
+                    Стенд для измерения характеристик двигателя и воздушных винтов <abbr
+                        title="Беспилотные летательные аппараты" style="text-decoration: none;">БПЛА</abbr>
+                </a>
+            </div>
+            <div id="headerNav">
+                <nav>
+                    <a href="index.html" class="headerLink">Главная</a>
+                    <a href="construction.html" class="headerLink">Конструкция</a>
+                    <a href="software.html" class="headerLink" style="border-style: solid;">ПО</a>
+                    <a href="#" class="headerLink">Тестирование</a>
+                    <a href="#" class="headerLink">Ещё</a>
+                </nav>
+            </div>
+        </div>
+        <hr>
+    </header>
+    <main>
+        <section>
+            <div style="display: flex;">
+                <div class="leftPanel">
+                    <div class="article">
+                        <div class="cardTitle">
+                            Оглавление
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="#Arduino">Программа для Arduino</a>
+                            </li>
+                            <li>
+                                <a href="#pc">Программа для компьютера</a>
+                            </li>
+
+                            <li>
+                                <a href="#Composition">Состав устройства</a>
+                            </li>
+
+                            <li>
+                                <a href="#features">Конструктивные особенности</a>
+                            </li>
+
+                            <li>
+                                <a href="#electro">Электронная составляющая стенда</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mainText">
+                    <section class="card2" id="Arduino">
+                        <div class="cardGrid">
+                            <div class="textGrid">
+                                <h2>Программа для Arduino</h2>
+                                <p>
+                                    Программа написана для отладочной платы Arduino Nano на языке C++. Програмное
+                                    обеспечение реализует следующие функции:
+                                </p>
+                                <ol>
+                                    <li>
+                                        <b>Измерение всех показаний с датчиков:</b> программное обеспечение считывает
+                                        данные с различных сенсоров (датчики тяги, напряжения, тока, температуры,
+                                        скорости, вибрации и звука).
+                                    </li>
+                                    <li>
+                                        <b>Вывод данных на дисплей:</b> все полученные показания отображаются на экране,
+                                        обеспечивая визуальную обратную связь оператору стенда. Это помогает быстро
+                                        оценить текущее состояние двигателя и лопастей.
+                                    </li>
+                                    <li>
+                                        <b>Управление системой через энкодер:</b> программа поддерживает удобное
+                                        управление системой с помощью энкодера. Пользователь может перемещаться по меню
+                                        на дисплее, включать и выключать двигатель, изменять скорость вращения мотора и
+                                        выполнять другие операции.
+                                    </li>
+                                    <li>
+                                        <b>Связь с компьютером:</b> реализована возможность обмена данными между стендом
+                                        и компьютером. Это позволяет вести журнал измерений, сохранять результаты тестов
+                                        и проводить дальнейший анализ собранной информации.
+                                    </li>
+                                </ol>
+                                <a href="https://github.com/alerew/MotorsStand">Скачать программу</a>
+                            </div>
+                            <div class="imgGrid">
+                                <img src="Images/Arduino IDE.jpg">
+                            </div>
+                        </div>
+                    </section>
+                    <section class="card2 animated" id="pc">
+                        <div class="textGrid">
+                            <h2>Программа для компьютера</h2>
+                        </div>
+                        <div class="cardGridHor" id="wpf">
+                            <div class="textGrid">
+                                <h3>C# и WPF</h3>
+                                <p>
+                                    Программа управления и документирования для компьютера самостоятельно написана на
+                                    высокоуровневом
+                                    языке C# с использованием технологии WPF (Windows Presentation Foundation), которая
+                                    представляет собой подсистему для создания графических интерфейсов.
+                                </p>
+                                <p>
+                                    WPF использует язык разметки XAML для декларативного создания интерфейса, разделяя
+                                    дизайн и логику, и обеспечивает аппаратное ускорение графики через DirectX. Гибкая
+                                    система стилей и шаблонов упрощает изменение внешнего вида приложения.
+                                </p>
+                            </div>
+                            <div class="imgGrid">
+                                <img src="Images/wpf.jpg">
+                            </div>
+                        </div>
+                        <div style="padding: 1px;">
+                            <div class="cardGridHor" id="description">
+                                <div class="imgGrid">
+                                    <img src="Images/MotorsStandScreen.jpg">
+                                </div>
+                                <div class="textGrid">
+                                    <h3>Описание</h3>
+                                    <p>
+                                        Стенд подключается к компьютеру по кабелю USB или Bluetooth. В программе
+                                        выбирается
+                                        порт и производится подключение. Через меню можно управлять стендом: калибровать
+                                        тензодатчик, включать мотор, изменять его скорость и запускать мотор в режиме
+                                        автоматического измерения. В этом режиме мотор запускается с минимальной
+                                        скоростью и
+                                        постепенно увеличивает её до максимума.
+                                    </p>
+                                    <p>
+                                        Программа получает все показания со стенда (тяга, сила тока, напряжение,
+                                        мощность,
+                                        уровень вибрации, температура, скорость вращения, эффективность и громкость) и
+                                        выводит их на экран. На основе этих данных строится график. Все характеристики
+                                        можно сохранить в виде таблицы Excel, в виде графика в формате PDF и SVG, а
+                                        также в
+                                        виде файла JSON.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+    <button id="back-to-top" class="hidden">^</button>
+</body>
+
+</html>
